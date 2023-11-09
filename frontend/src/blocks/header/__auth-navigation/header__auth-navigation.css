@@ -1,0 +1,9 @@
+.header__auth-navigation {
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 628px) {
+  .header__auth-navigation {
+    display: none;
+  }
+}

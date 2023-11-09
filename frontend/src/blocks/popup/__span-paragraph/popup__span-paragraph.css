@@ -1,0 +1,12 @@
+.popup__span-paragraph {
+  margin: 5px 0px 13px 0px;
+  padding: 0px;
+  max-width: 358px;
+  min-height: 2em;
+  color: #ff0000;
+}
+@media screen and (max-width: 426px) {
+  .popup__span-paragraph {
+    max-width: 238px;
+  }
+}

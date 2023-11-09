@@ -1,0 +1,7 @@
+.header__menu-button_opened {
+  width: 20px;
+  height: 20px;
+  display: block;
+  align-self: flex-end;
+  background-image: url(../../../../images/Close_Icon_svg.svg);
+}

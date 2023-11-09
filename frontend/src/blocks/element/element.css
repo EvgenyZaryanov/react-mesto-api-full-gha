@@ -1,0 +1,16 @@
+.element {
+  max-width: 282px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.element:hover {
+  box-shadow: -5px -5px 10px 2px lightblue;
+  transform: scale(0.95);
+}
+.element {
+  transition: transform 0.3s ease-in;
+}

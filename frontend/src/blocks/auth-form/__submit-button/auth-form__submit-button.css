@@ -1,0 +1,27 @@
+.auth-form__submit-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 2px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: opacity 0.3s ease;
+  margin: 216px 0px 0px;
+  padding: 0px;
+}
+.auth-form__submit-button:hover {
+  opacity: 0.8;
+}
+.auth-form__submit-button {
+  transition: transform 0.3s linear;
+}
+.auth-form__submit-button:hover {
+  transform: scale(0.9);
+}

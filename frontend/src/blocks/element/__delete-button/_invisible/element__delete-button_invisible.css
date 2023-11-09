@@ -1,0 +1,4 @@
+.element__delete-button_invisible {
+  /* display: block; */
+  display: none;
+}

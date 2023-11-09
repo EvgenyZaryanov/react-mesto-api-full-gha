@@ -1,0 +1,22 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 358px;
+  margin: 60px auto 112px;
+  align-items: center;
+  border: none;
+  background-color: black;
+  /* outline: 1px solid red; */
+}
+
+@media screen and (max-width: 600px) {
+  .auth-form {
+    margin: 60px auto 0px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .auth-form {
+    max-width: 260px;
+    margin: 0px 30px 30px;
+  }
+}

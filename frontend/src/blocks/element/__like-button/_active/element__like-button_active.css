@@ -1,0 +1,13 @@
+.element__like-button_active {
+  background-image: url(../../../../images/image__black_like_button.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.element__like-button_active {
+  transition: transform 0.3s ease-out;
+}
+.element__like-button_active:hover {
+  transform: scale(1.2);
+}

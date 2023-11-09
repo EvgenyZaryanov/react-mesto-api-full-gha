@@ -1,0 +1,46 @@
+.profile__name {
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 500;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 504px) {
+  .profile__name {
+    font-size: 27px;
+    line-height: 32.68px;
+    text-align: center;
+  }
+}
+
+/* .profile__name {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 960px) {
+  .profile__name {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: start;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profile__name {
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+  }
+} */
