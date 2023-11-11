@@ -24,8 +24,8 @@ router.post("/signup", createUserValidator, createUser); // роутер для 
 router.use("/*", auth, (req, res, next) => {
   next(
     new NotFoundError(
-      "Страница не найдена. Проверьте правильность ввода URL и метод запроса"
-    )
+      "Страница не найдена. Проверьте правильность ввода URL и метод запроса",
+    ),
   );
 });
 
