@@ -95,5 +95,5 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'https://zaryanov.nomoredomainsmonster.ru'
+  baseUrl: 'http://localhost:3000'
 });
