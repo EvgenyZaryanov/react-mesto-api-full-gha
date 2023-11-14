@@ -1,9 +1,9 @@
 {
   "name": "react-mesto-auth",
-  "homepage": "https://zaryanov.nomoredomainsmonster.ru",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://zaryanov.nomoredomainsmonster.ru",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
