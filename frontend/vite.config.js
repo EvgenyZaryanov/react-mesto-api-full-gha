@@ -2,15 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/dist/',
-  plugins: [react()]
-});
-
-// eslint-disable-next-line no-undef
-module.exports = {
+  base: '/react-mesto-auth/',
   root: './',
   build: {
     outDir: 'dist'
   },
-  publicDir: 'assets'
-};
+  publicDir: 'assets',
+  plugins: [react()]
+});
