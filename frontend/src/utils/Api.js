@@ -95,5 +95,5 @@ class Api {
 }
 
 export const api = new Api({
-  baseUrl: 'http://zaryanov.nomoredomainsmonster.ru'
+  baseUrl: 'https://zaryanov.nomoredomainsmonster.ru'
 });
