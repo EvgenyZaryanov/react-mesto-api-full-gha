@@ -53,5 +53,5 @@ class Auth {
 }
 
 export const auth = new Auth({
-  baseUrl: 'http://api.zaryanov.nomoredomainsmonster.ru'
+  baseUrl: 'http://localhost:3000'
 });
