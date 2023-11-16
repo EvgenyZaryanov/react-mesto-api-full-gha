@@ -1,5 +1,5 @@
 //---------------------ОБЩИЕ-------------------//
-export const token = '2386186e-8350-4225-ade5-72f6caee8811';
+// export const token = '2386186e-8350-4225-ade5-72f6caee8811';
 
 export const buttonOpenProfileAvatar = document.querySelector('.profile__avatar');
 export const buttonOpenPopupProfile = document.querySelector('.profile__edit-button');
