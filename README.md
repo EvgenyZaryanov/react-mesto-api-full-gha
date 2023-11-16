@@ -10,7 +10,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.0.240
+IP 51.250.0.240
 
 Frontend https://zaryanov.nomoredomainsmonster.ru
 
