@@ -1,8 +1,7 @@
 // Модуль dotenv для добавления переменных окружения в process.env
 require("dotenv").config();
 
-const { PORT = 3000, MONGO_URL = "mongodb://127.0.0.1:27017/mestodb" } =
-  process.env;
+const { PORT = 3000, MONGO_URL = "mongodb://127.0.0.1:27017/mestodb" } = process.env;
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -33,6 +32,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // миддлвэр-логгер запросов
 app.use(requestLogger);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 // роутер
 app.use(appRouter);
