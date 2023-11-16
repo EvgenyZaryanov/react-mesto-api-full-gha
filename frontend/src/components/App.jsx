@@ -239,9 +239,9 @@ function App() {
               />
             }
           />
-          <Route path="/signup" element={<Register onRegister={handleRegistration} />} />
-          <Route path="/signin" element={<Login handleLogIn={handleLogIn} />} />
-          <Route path="*" element={!loggedIn ? <Navigate to="/signin" /> : <Navigate to="/" />} />
+          <Route path="/sign-up" element={<Register onRegister={handleRegistration} />} />
+          <Route path="/sign-in" element={<Login handleLogIn={handleLogIn} />} />
+          <Route path="*" element={!loggedIn ? <Navigate to="/sign-in" /> : <Navigate to="/" />} />
         </Routes>
         <Footer />
 
