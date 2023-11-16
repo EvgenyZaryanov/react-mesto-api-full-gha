@@ -48,11 +48,3 @@ const Login = ({ handleLogIn }) => {
 };
 
 export default Login;
-
-// React.useEffect(() => {
-//   const previousEmail = localStorage.getItem('userName');
-//   const previousPassword = localStorage.getItem('userPassword');
-
-//   previousEmail ? setUserEmail(previousEmail) : setUserEmail('');
-//   previousPassword ? setUserPassword(previousPassword) : setUserPassword('');
-// }, []);
