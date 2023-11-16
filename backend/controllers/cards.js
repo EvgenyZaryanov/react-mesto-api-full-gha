@@ -34,9 +34,7 @@ const deleteCardById = (req, res, next) => {
         return;
       }
       CardModel.deleteOne({ _id: card._id })
-        .then(() =>
-          res.status(httpCode.OK_REQUEST).send({ message: "Карточка удалена" })
-        )
+        .then(() => res.status(httpCode.OK_REQUEST).send({ message: "Карточка удалена" }))
         .catch((err) => next(err));
     })
     .catch((err) => {
@@ -56,7 +54,7 @@ const likeCard = (req, res, next) => {
   CardModel.findByIdAndUpdate(
     req.params.cardId,
     { $addToSet: { likes: req.user._id } },
-    { new: true }
+    { new: true },
   )
     .orFail(() => Error("NotFound"))
     .then((card) => res.send(card))
@@ -64,8 +62,8 @@ const likeCard = (req, res, next) => {
       if (err.name === "CastError") {
         next(
           new BadRequestError(
-            "Переданы некорректные данные для постановки лайка"
-          )
+            "Переданы некорректные данные для постановки лайка",
+          ),
         );
         return;
       }
@@ -81,14 +79,14 @@ const dislikeCard = (req, res, next) => {
   CardModel.findByIdAndUpdate(
     req.params.cardId,
     { $pull: { likes: req.user._id } },
-    { new: true }
+    { new: true },
   )
     .orFail(() => Error("NotFound"))
     .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === "CastError") {
         next(
-          new BadRequestError("Переданы некорректные данные для снятии лайка")
+          new BadRequestError("Переданы некорректные данные для снятии лайка"),
         );
         return;
       }
