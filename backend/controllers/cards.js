@@ -27,7 +27,7 @@ const createCard = (req, res, next) => {
 
 const deleteCardById = (req, res, next) => {
   CardModel.findById(req.params.cardId)
-    .orFail(() => Error("NotFound"))
+    .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((card) => {
       if (card.owner.toString() !== req.user._id) {
         next(new ForbiddenError("Нельзя удалить чужую карточку!"));
@@ -56,7 +56,7 @@ const likeCard = (req, res, next) => {
     { $addToSet: { likes: req.user._id } },
     { new: true },
   )
-    .orFail(() => Error("NotFound"))
+    .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === "CastError") {
@@ -81,7 +81,7 @@ const dislikeCard = (req, res, next) => {
     { $pull: { likes: req.user._id } },
     { new: true },
   )
-    .orFail(() => Error("NotFound"))
+    .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === "CastError") {

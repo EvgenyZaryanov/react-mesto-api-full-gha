@@ -23,7 +23,7 @@ const getCurrentUser = (req, res, next) => {
 
 const getUserById = (req, res, next) => {
   UserModel.findById(req.params.userId)
-    .orFail(() => Error("NotFound"))
+    .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((user) => res.send(user))
     .catch((err) => {
       if (err.name === "CastError") {
@@ -83,7 +83,7 @@ const updateUser = (req, res, next) => {
     { name, about },
     { new: true, runValidators: true },
   )
-    .orFail(() => Error("NotFound"))
+    .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((data) => {
       if (data) {
         res.send(data);
@@ -112,13 +112,9 @@ const updateUserAvatar = (req, res, next) => {
     { avatar },
     { new: true, runValidators: true },
   )
-    .orFail(() => Error("NotFound"))
+    .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((data) => {
-      if (data) {
-        res.send(data);
-        return;
-      }
-      next(new NotFoundError("Пользователь с указанным id не найден"));
+      res.send(data);
     })
     .catch((err) => {
       if (err.name === "ValidationError") {
