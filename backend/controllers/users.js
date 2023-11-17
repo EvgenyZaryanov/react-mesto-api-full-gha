@@ -39,18 +39,18 @@ const getUserById = (req, res, next) => {
 };
 
 const createUser = (req, res, next) => {
-  const { name, about, avatar, email, password } = req.body;
+  const {
+    name, about, avatar, email, password,
+  } = req.body;
   bcrypt
     .hash(password, 10)
-    .then((hash) =>
-      UserModel.create({
-        name,
-        about,
-        avatar,
-        email,
-        password: hash,
-      })
-    )
+    .then((hash) => UserModel.create({
+      name,
+      about,
+      avatar,
+      email,
+      password: hash,
+    }))
     .then((user) => {
       const userWithoutPassword = user.toObject();
       delete userWithoutPassword.password;
@@ -59,15 +59,15 @@ const createUser = (req, res, next) => {
     .catch((err) => {
       if (err.code === 11000) {
         next(
-          new ConflictError("Пользователь с таким email уже зарегистрирован")
+          new ConflictError("Пользователь с таким email уже зарегистрирован"),
         );
         return;
       }
       if (err.name === "ValidationError") {
         next(
           new BadRequestError(
-            "Переданы некорректные данные при создании пользователя"
-          )
+            "Переданы некорректные данные при создании пользователя",
+          ),
         );
         return;
       }
@@ -81,7 +81,7 @@ const updateUser = (req, res, next) => {
   UserModel.findByIdAndUpdate(
     req.user._id,
     { name, about },
-    { new: true, runValidators: true }
+    { new: true, runValidators: true },
   )
     .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((data) => {
@@ -91,8 +91,8 @@ const updateUser = (req, res, next) => {
       if (err.name === "ValidationError") {
         next(
           new BadRequestError(
-            "Переданы некорректные данные при обновлении профиля"
-          )
+            "Переданы некорректные данные при обновлении профиля",
+          ),
         );
         return;
       }
@@ -106,7 +106,7 @@ const updateUserAvatar = (req, res, next) => {
   UserModel.findByIdAndUpdate(
     req.user._id,
     { avatar },
-    { new: true, runValidators: true }
+    { new: true, runValidators: true },
   )
     .orFail(() => new NotFoundError("Пользователь с указанным id не найден"))
     .then((data) => {
@@ -116,8 +116,8 @@ const updateUserAvatar = (req, res, next) => {
       if (err.name === "ValidationError") {
         next(
           new BadRequestError(
-            "Переданы некорректные данные при обновлении аватара"
-          )
+            "Переданы некорректные данные при обновлении аватара",
+          ),
         );
         return;
       }
@@ -134,7 +134,7 @@ const login = (req, res, next) => {
         { _id: user._id },
         NODE_ENV === "production" ? JWT_SECRET : "super_secret_key",
         { expiresIn: "7d" },
-        null
+        null,
       );
       res.send({ token });
     })
