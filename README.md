@@ -1,6 +1,6 @@
 [![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
-# Проект "Mesto" <img src="src/images/site-icon.png" width="30px" height="30px"/> (версия на React+Vite)
+# Проект "Mesto" <img src="frontend/src/images/site-icon.png" width="30px" height="30px"/> (версия на React+Vite)
 
 __Описание проекта:__
 Mesto - это интерактивная страница, на которой пользователи могут делиться фотографиями, удалять их и ставить лайки. Данный учебный проект создан в рамках серии проектных работ Яндекс Практикума.
