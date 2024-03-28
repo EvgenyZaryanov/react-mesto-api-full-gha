@@ -33,7 +33,10 @@ Backend https://api.zaryanov.nomoredomainsmonster.ru
 - JavaScript:
 - REST API;
 - Webpack;
-- React JS + Vite.
+- React JS + Vite;
+- Node.js;
+- Express;
+- MongoDB.
 
 ### Установка и запуск приложения:
 1. Клонируйте репозиторий на свой компьютер.
