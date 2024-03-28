@@ -14,7 +14,7 @@ __Mesto__ - это интерактивное SPA-приложение, в ко�
 
 **Временно недоступен в связи с переносом проекта на другой сервер** 
 
-IP 51.250.0.240
+IP 158.160.24.54
 Frontend https://zaryanov.nomoredomainsmonster.ru
 Backend https://api.zaryanov.nomoredomainsmonster.ru
 
