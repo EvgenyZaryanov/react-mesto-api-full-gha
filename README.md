@@ -1,6 +1,6 @@
 [![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
-# Проект Mesto <img src="frontend/src/images/site-icon.png" width="30px" height="30px"/> (версия на React+Vite)
+# Проект Mesto <img src="frontend/src/images/site-icon.png" width="30px" height="30px"/> (React+Vite)
 
 __Описание проекта:__
 
@@ -28,23 +28,12 @@ Backend https://api.zaryanov.nomoredomainsmonster.ru
 - CSS3:
 - Flexbox;
 - Grid Layout;
-- Positioning;
 - Adaptive UI;
 - Media Queries;
-- Методология БЭМ;
-- Фйловая структура Nested БЭМ;
 - JavaScript:
-- Стиль CamelCase;
-- Объектно-ориентированное программирование;
-- Промисы (Promise);
-- Асинхронность и оптимизация;
-- API (Application Programming Interface);
+- REST API;
 - Webpack;
-- React JS:
-- Create React App + Vite;
-- Портирование разметки в JSX;
-- Функциональные компоненты;
-- Хуки.
+- React JS + Vite.
 
 ### Установка и запуск приложения:
 1. Клонируйте репозиторий на свой компьютер.
